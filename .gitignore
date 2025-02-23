@@ -1,0 +1,5 @@
+/venv
+*.pyc
+/checkpoints
+.env
+__pycache__/
