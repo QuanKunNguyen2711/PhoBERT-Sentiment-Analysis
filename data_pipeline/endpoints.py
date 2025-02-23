@@ -36,10 +36,7 @@ async def preprocess(
         label = mapping.get("label")
         
         df = await convert_file_to_df(file)
-        # cols = features + [label]
-        # preprocess_dataset(file, features, label, db_str)
         return await preprocess_dataset(df, features, label, db_str, cur_user_id)
-        # return {"message": "Preprocessed task is running in background", "event": WebsocketEventResult.PREPROCESS_DATASET}
 
     except Exception as e:
         if isinstance(e, HTTPException):
